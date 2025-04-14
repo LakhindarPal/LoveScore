@@ -1,0 +1,107 @@
+:root {
+  --pink: #ff6ba3;
+  --light-pink: #ffe4ec;
+  --white: #fff;
+  --shadow: rgba(255, 105, 180, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffd6e8, #ffe4ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px var(--shadow);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  color: var(--pink);
+  margin-bottom: 1.5rem;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input {
+  border: 2px solid var(--pink);
+}
+
+button {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff4081;
+}
+
+#result {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--pink);
+}
+
+#message {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+.heart {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 3rem;
+  color: var(--pink);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
